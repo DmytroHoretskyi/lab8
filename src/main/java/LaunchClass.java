@@ -1,3 +1,4 @@
+import com.restapi.rest.entities.Travel;
 import manager.TravelManager;
 import models.*;
 
@@ -8,7 +9,7 @@ public class LaunchClass {
     public static void main(String[] args) {
         TravelManager travelManager = new TravelManager();
 
-        Travel first = new Travel(Country.UKRAINE, "Mother", 5000);
+        Travel first = new Travel(Country.UKRAINE, "Mother", 5000, 1L);
         Travel second = Travel.builder()
                 .country(Country.EGYPT)
                 .price(20)
