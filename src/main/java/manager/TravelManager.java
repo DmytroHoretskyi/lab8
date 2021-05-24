@@ -2,7 +2,7 @@ package manager;
 
 import models.Country;
 import models.SortOrder;
-import models.Travel;
+import com.restapi.rest.entities.Travel;
 
 import java.util.ArrayList;
 import java.util.Comparator;

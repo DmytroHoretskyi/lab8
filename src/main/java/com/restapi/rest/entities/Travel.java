@@ -1,60 +1,26 @@
 package com.restapi.rest.entities;
 
+import com.sun.istack.NotNull;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.experimental.SuperBuilder;
+import models.Country;
+
+import javax.persistence.*;
+
+ @Entity
+ @Data
+ @NoArgsConstructor
+ @AllArgsConstructor
+ @SuperBuilder
+ @Table(name = "Travel")
  public class Travel {
+    private Country country;
+    private String producer;
+    private int price;
 
-     private Integer id;
-     private String travelType;
-     private double price;
-     private String producer;
-
-     public Travel () { }
-
-     public Travel(Integer id, String travelType, double price, String producer) {
-         this.id = id;
-         this.travelType = travelType;
-         this.price = price;
-         this.producer = producer;
-     }
-
-     public Integer getId() {
-         return id;
-     }
-
-     public void setId(Integer id) {
-         this.id = id;
-     }
-
-     public String getTravelType() {
-         return travelType;
-     }
-
-     public void setTravelType(String travelType) {
-         this.travelType = travelType;
-     }
-
-     public double getPrice() {
-         return price;
-     }
-
-     public void setPrice(double price) {
-         this.price = price;
-     }
-
-     public String getProducer() {
-         return producer;
-     }
-
-     public void setProducer(String producer) {
-         this.producer = producer;
-     }
-
-     @Override
-     public String toString() {
-         return "Travel{" +
-                 "id=" + id +
-                 ", travelType='" + travelType + '\'' +
-                 ", price=" + price +
-                 ", producer='" + producer + '\'' +
-                 '}';
-     }
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
  }

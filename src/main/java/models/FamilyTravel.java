@@ -1,5 +1,6 @@
 package models;
 
+import com.restapi.rest.entities.Travel;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
